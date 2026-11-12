@@ -1,0 +1,416 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Кристалл - кафе и ресторан в Великом Устюге</title>
+<meta name="description" content="Кафе «Кристалл» на набережной Великого Устюга: русская кухня, вид на реку, банкеты. Набережная ул., 72. +7 921 825-18-88.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Кафе «Кристалл»">
+<meta property="og:title" content="Кафе и ресторан на набережной в Великом Устюге">
+<meta property="og:image" content="./assets/hero.jpg">
+<meta name="theme-color" content="#edf1f2">
+<link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230f1922%27/%3E%3Ccircle cx=%2716%27 cy=%279.5%27 r=%274.5%27 fill=%27%23f0a944%27/%3E%3Cpath d=%27M4 16H28%27 stroke=%27%23ece6da%27 stroke-width=%271.6%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M7.5 23C11 19.3 18 19.3 21.5 23C18 26.7 11 26.7 7.5 23z%27 fill=%27%23ece6da%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Кристалл","servesCuisine":["Русская"],"telephone":"+79218251888","address":{"@type":"PostalAddress","streetAddress":"Набережная улица, 72","addressLocality":"Великий Устюг","addressRegion":"Вологодская область","addressCountry":"RU"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","ratingCount":"98"},"sameAs":["https://vk.ru/cafekristall"]}
+</script>
+<style>
+  /* ---- тема «Белые ночи»: туман над озером, глубокая вода текстом, морошка кнопкой ---- */
+  .v-page {
+    --v-canvas: #edf1f2; --v-surface: #ffffff;
+    --v-ink: #13232f; --v-ink-soft: #4f6370;
+    --v-accent: #ee9f3a; --v-accent-ink: #1d1206;
+    --on-photo: #f4efe6; --on-photo-soft: #d9dfe2;
+    --v-shadow-color: 30 50 65;
+    --v-font-display: "Tenor Sans", "Georgia", serif;
+    --v-font-text: "Golos Text", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 400;
+    --v-track-tight: -0.012em;
+    --v-radius: 4px;
+    --v-section: clamp(4.5rem, 10vw, 9rem);
+  }
+  html, body { margin: 0; background: #edf1f2; }
+  html { scroll-padding-top: 5rem; }
+  .v-page { line-height: 1.62; letter-spacing: .005em; }
+  .v-page .v-display { line-height: 1.04; }
+  .v-page .v-display--xl { font-size: clamp(2.7rem, 1.4rem + 4.6vw, 6.2rem); line-height: .98; }
+  .v-page h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); line-height: 1.1; }
+  .v-page p { text-wrap: pretty; }
+  .soft { color: var(--v-ink-soft); }
+  .slot { background: color-mix(in oklab, var(--v-accent) 22%, transparent); border-radius: 3px; padding: 0 .25em; }
+  .v-page a.link { color: var(--v-ink); text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--v-accent) 70%, transparent); text-underline-offset: .22em; transition: text-decoration-color .16s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .v-page a.link:hover { text-decoration-color: var(--v-accent); } }
+  .q { font-family: var(--v-font-display); }
+  .who { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+
+  /* ---- шапка ---- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; gap: var(--v-5); padding: .8rem var(--v-gutter); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar:not(.is-scrolled) { --v-ink: var(--on-photo); --v-ink-soft: var(--on-photo-soft); color: var(--v-ink); }
+  .bar.is-scrolled { background: rgb(237 241 242 / .9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__brand { display: flex; align-items: center; gap: .6rem; font-family: var(--v-font-display); font-size: 1.55rem; line-height: 1; text-decoration: none; }
+  .bar__mark { width: 2.9rem; height: 2.2rem; flex: none; }
+  @media (max-width: 480px) { .bar__mark { width: 2.2rem; height: 1.65rem; } .bar__brand { gap: .45rem; } .bar__brand span { font-size: .98rem; letter-spacing: .05em; } .bar { gap: var(--v-3); padding-inline: 1rem; } .bar .v-btn { padding: .65em 1em; font-size: .8rem; } }
+  .bar.is-scrolled .bar__mark circle:last-child, .foot__mark circle:last-child, .close__mark circle:last-child { fill: var(--v-canvas); }
+  .bar__brand span { letter-spacing: .1em; text-transform: uppercase; font-size: 1.2rem; }
+  .bar__brand small { font-family: var(--v-font-text); font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: .01em; }
+  .bar nav { display: flex; gap: var(--v-5); margin-left: auto; font-size: var(--v-t-sm); }
+  .bar nav a { text-decoration: none; color: var(--v-ink-soft); transition: color .16s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .bar nav a:hover { color: var(--v-ink); } }
+  .bar .v-btn { padding: .7em 1.2em; }
+  @media (max-width: 960px) { .bar nav { display: none; } .bar .v-btn { margin-left: auto; } .bar__brand small { display: none; } }
+
+  /* ---- 1 · hero ---- */
+  #top { --v-ink: var(--on-photo); --v-ink-soft: var(--on-photo-soft); color: var(--v-ink); }
+  .hero__back { inset: -6% 0; }
+  .hero__back img, .hero__back picture { width: 100%; height: 100%; }
+  .hero__back img { object-fit: cover; object-position: 60% 50%; }
+  .hero__shade { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(90deg, rgb(10 17 24 / .82) 0%, rgb(10 17 24 / .55) 34%, transparent 62%), linear-gradient(to top, rgb(10 17 24 / .7), transparent 38%); }
+  .hero__copy { max-width: min(44rem, 88vw); }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 30ch; color: #e4ddd0; }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-5); margin-top: var(--v-6); }
+  .hero__when { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .hero__when b { font-weight: 500; color: var(--v-ink); }
+  @media (max-width: 860px) {
+    .hero__back img { object-position: 50% 40%; }
+    .hero__shade { background: linear-gradient(to top, rgb(10 17 24 / .92) 0%, rgb(10 17 24 / .62) 40%, transparent 72%); }
+    .hero__copy.v-copy--lead { bottom: clamp(2rem, 7vh, 4rem); }
+  }
+
+  /* ---- 2 · сегодня (фирменный ход) ---- */
+  .today { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .today__ph { position: relative; aspect-ratio: 3 / 4; overflow: hidden; border-radius: var(--v-radius); box-shadow: var(--v-e2); }
+  .today__ph img { width: 100%; height: 100%; object-fit: cover; }
+  .today__ph figcaption { position: absolute; left: 1rem; bottom: .9rem; font-size: var(--v-t-xs); color: #f3e6d6; text-shadow: 0 1px 8px rgb(0 0 0 / .6); }
+  .today__lead { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .today__time { font-family: var(--v-font-display); font-size: clamp(3.2rem, 2rem + 6vw, 7.5rem); line-height: .95; letter-spacing: -.02em; font-variant-numeric: tabular-nums; margin-top: var(--v-3); }
+  .today__time small { display: block; font-family: var(--v-font-text); font-size: var(--v-t-lg); letter-spacing: 0; color: var(--v-ink); margin-bottom: var(--v-3); }
+  .today__note { margin-top: var(--v-5); max-width: 40ch; font-size: var(--v-t-lg); line-height: 1.45; }
+  .status { display: inline-flex; align-items: center; gap: .55rem; margin-top: var(--v-7); font-size: var(--v-t-sm); }
+  .status i { width: .55rem; height: .55rem; border-radius: 50%; background: #3f9a5c; box-shadow: 0 0 0 4px rgb(63 154 92 / .16); }
+  .status.is-closed i { background: var(--v-ink-soft); box-shadow: 0 0 0 4px rgb(79 99 112 / .14); }
+  .hours { margin-top: var(--v-4); display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); }
+  .hours li { padding: .7rem .2rem 0; color: var(--v-ink-soft); }
+  .hours li b { display: block; font-weight: 500; color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .hours li.is-today { color: var(--v-ink); box-shadow: inset 0 2px 0 var(--v-accent); }
+  .hours li.is-today b { color: var(--v-ink); }
+  .tip { margin-top: var(--v-6); padding-top: var(--v-5); border-top: 1px solid var(--v-hair); max-width: 44ch; }
+  .tip p { font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1.35; }
+  .tip p.who { margin-top: var(--v-2); font-family: var(--v-font-text); font-size: var(--v-t-sm); line-height: 1.5; }
+  @media (max-width: 860px) {
+    .today { grid-template-columns: 1fr; }
+    .today__ph { aspect-ratio: 3 / 4; width: min(100%, calc(72svh * .75)); }
+    .hours { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: .4rem; }
+  }
+
+  /* ---- 3 · кухня: pin, сменяются блюда ---- */
+  .kitchen { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; padding: 5.5rem var(--v-gutter) 3rem; max-width: 84rem; margin-inline: auto; }
+  .kitchen__copy { display: flex; flex-direction: column; gap: var(--v-6); }
+  .dishes { position: relative; min-height: 17rem; }
+  .dishes .v-copy { left: 0; top: 0; right: 0; max-width: 34rem; }
+  .dishes p { margin-top: var(--v-3); }
+  .dishes blockquote { margin: var(--v-5) 0 0; padding-left: 1rem; border-left: 1px solid var(--v-accent); }
+  .dishes blockquote p { font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1.35; margin: 0; }
+  .dishes blockquote .who { margin-top: var(--v-2); }
+  .kitchen__bar { height: 1px; background: var(--v-hair); position: relative; max-width: 34rem; }
+  .kitchen__bar i { position: absolute; inset: 0; background: var(--v-accent); transform-origin: left; transform: scaleX(var(--v-p, 0)); }
+  .kitchen__fig { position: relative; height: min(76svh, 44rem); aspect-ratio: 3 / 4; justify-self: end; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); }
+  .kitchen__fig .ph { position: absolute; inset: 0; }
+  .kitchen__fig img { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 860px) {
+    .kitchen { grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-items: start; gap: var(--v-5); padding: 4.6rem var(--v-gutter) 1.5rem; }
+    .kitchen__fig { order: -1; height: 40svh; width: auto; aspect-ratio: 3 / 4; justify-self: center; }
+    .kitchen__copy { gap: var(--v-4); }
+    .kitchen__copy .v-display--md { font-size: var(--v-t-xl); }
+    .dishes blockquote { margin-top: var(--v-3); }
+  }
+
+  /* ---- 4 · меню: веер карточек с фото + списки ---- */
+  .fanwrap { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; padding: 5.5rem var(--v-gutter) 2rem; max-width: 84rem; margin-inline: auto; }
+  .fanwrap__copy { display: flex; flex-direction: column; gap: var(--v-5); max-width: 30rem; }
+  .fan { position: relative; height: min(70svh, 38rem); --open: min(1, calc(var(--v-p, 0) * 2.6 + .06)); --ang: 5deg; --spread: clamp(2.6rem, 4.6vw, 4.4rem); --cw: clamp(10rem, 14vw, 14rem); }
+  .v-page .fan__card { position: absolute; left: 50%; bottom: 4%; width: var(--cw); padding: .45rem .45rem 0; border-radius: 6px; background: #ffffff; color: #13232f; box-shadow: 0 1px 3px rgb(30 50 65 / .16), 0 16px 36px rgb(30 50 65 / .2); cursor: zoom-in; text-align: left;
+    transform-origin: 50% 150%;
+    transform: translateX(-50%) translateX(calc(var(--d) * var(--spread) * var(--open))) rotate(calc(var(--d) * var(--ang) * var(--open)));
+    transition: translate .18s var(--v-ease-out); }
+  .fan__card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 3px; }
+  .fan__card span { display: block; padding: .5rem .15rem .6rem; font-size: var(--v-t-xs); font-weight: 500; line-height: 1.3; }
+  @media (hover: hover) and (pointer: fine) { .v-page .fan__card:hover { translate: 0 -1.4rem; z-index: 10; } }
+  .v-page .fan__card:focus-visible { translate: 0 -1.4rem; z-index: 10; }
+  .fan__hint { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  @media (max-width: 860px) {
+    .fanwrap { grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-items: start; gap: var(--v-3); padding: 4.8rem var(--v-gutter) 1rem; }
+    .fanwrap__copy { gap: var(--v-3); }
+    .fanwrap__copy .v-display--md { font-size: var(--v-t-xl); }
+    .fan { height: 100%; min-height: 20rem; --ang: 3.5deg; --spread: 1.6rem; --cw: 7.7rem; }
+    .v-page .fan__card { transform-origin: 50% 140%; bottom: auto; top: 12%; }
+  }
+  .menu-list__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: var(--v-7) clamp(1.5rem, 4vw, 3.5rem); margin-top: var(--v-6); }
+  .page { padding-top: var(--v-5); border-top: 1px solid var(--v-hair-strong); }
+  .page h3 { font-size: var(--v-t-lg); margin-bottom: var(--v-4); }
+  .page li { padding: .8rem 0; border-top: 1px solid var(--v-hair); }
+  .page li:first-child { border-top: 0; padding-top: 0; }
+  .line { display: flex; align-items: baseline; gap: .6rem; }
+  .line span { font-weight: 500; }
+  .line::after { content: ""; order: 1; flex: 1; border-bottom: 1px dotted var(--v-hair-strong); transform: translateY(-.25em); }
+  .line em { order: 2; font-style: normal; font-size: var(--v-t-xs); color: var(--v-ink-soft); white-space: nowrap; }
+  .page li p { font-size: var(--v-t-sm); color: var(--v-ink-soft); margin-top: .25rem; }
+
+  /* ---- 5 · отзывы ---- */
+  .rev__head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--v-5); }
+  .rating { display: flex; align-items: center; gap: var(--v-4); }
+  .rating b { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-3xl); line-height: 1; }
+  .stars { color: var(--v-accent); letter-spacing: .12em; font-size: 1.05rem; }
+  .rev__big { margin-top: var(--v-8); max-width: 26ch; font-family: var(--v-font-display); font-size: var(--v-t-2xl); line-height: 1.15; }
+  .rev__big + .who { margin-top: var(--v-4); }
+  .rev__list { margin-top: var(--v-8); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--v-7) clamp(2rem, 6vw, 6rem); }
+  .rev__list li { padding-top: var(--v-5); border-top: 1px solid var(--v-hair); }
+  .rev__list li:nth-child(even) { transform: translateY(3rem); }
+  .rev__list .who { margin-top: var(--v-3); }
+  .rev__more { margin-top: calc(var(--v-8) + 3rem); }
+  @media (max-width: 760px) { .rev__big { font-size: var(--v-t-xl); line-height: 1.22; } .rev__list { grid-template-columns: 1fr; gap: var(--v-6); } .rev__list li:nth-child(even) { transform: none; } .rev__more { margin-top: var(--v-7); } }
+
+  /* ---- 6 · праздники ---- */
+  .fest { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .fest__ph { position: relative; padding-bottom: 14%; }
+  .fest__ph .a { border-radius: var(--v-radius); overflow: hidden; aspect-ratio: 4 / 3; box-shadow: var(--v-e2); }
+  .fest__ph .b { position: absolute; right: -6%; bottom: 0; width: 52%; aspect-ratio: 3 / 2; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); outline: 6px solid var(--v-canvas); }
+  .fest__ph img { width: 100%; height: 100%; object-fit: cover; }
+  .facts { margin-top: var(--v-6); }
+  .facts li { display: grid; grid-template-columns: 8.5rem 1fr; gap: var(--v-4); padding: .85rem 0; border-top: 1px solid var(--v-hair); }
+  .facts li span { color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  @media (max-width: 860px) { .fest { grid-template-columns: 1fr; } .fest__ph .b { right: 0; } .facts li { grid-template-columns: 1fr; gap: .1rem; } }
+
+  /* ---- 7 · как добраться ---- */
+  .road { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .road__ph { border-radius: var(--v-radius); overflow: hidden; aspect-ratio: 4 / 3; box-shadow: var(--v-e2); }
+  .road__ph img { width: 100%; height: 112%; object-fit: cover; }
+  .road .actions { display: flex; flex-wrap: wrap; gap: var(--v-3); margin-top: var(--v-6); }
+  @media (max-width: 860px) { .road { grid-template-columns: 1fr; } .road__ph { order: -1; } }
+
+  /* ---- 7б · галерея закатов ---- */
+  .sunsets { margin-top: var(--v-9); }
+  .sunsets__head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--v-3) var(--v-6); margin-bottom: var(--v-6); }
+  .sunsets__head p { max-width: 38ch; }
+  .sunsets__grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: clamp(4.5rem, 7vw, 7rem); gap: var(--v-3); }
+  .v-page .sun { position: relative; display: block; padding: 0; overflow: hidden; border-radius: var(--v-radius); background: var(--v-surface); cursor: zoom-in; }
+  .sun img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .sun:hover img { transform: scale(1.03); } }
+  .sun--wide { grid-column: span 4; grid-row: span 3; }
+  .sun--tall { grid-column: span 2; grid-row: span 3; }
+  .sun--pano { grid-column: span 6; grid-row: span 3; }
+  @media (max-width: 760px) {
+    .sunsets__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 7.5rem; }
+    .sun--wide, .sun--pano { grid-column: span 2; grid-row: span 2; }
+    .sun--tall { grid-column: span 1; grid-row: span 3; }
+  }
+  .lb { padding: 0; border: 0; background: transparent; max-width: 94vw; max-height: 92svh; overflow: visible; }
+  .lb::backdrop { background: rgb(8 13 19 / .9); }
+  .lb img { display: block; max-width: 94vw; max-height: 86svh; width: auto; height: auto; border-radius: var(--v-radius); }
+  .v-page .lb__close, .lb__close { display: block; margin: .8rem auto 0; padding: .55em 1.2em; border-radius: 999px; color: #ece6da; font: inherit; font-size: .9rem; background: transparent; border: 1px solid rgb(236 230 218 / .4); cursor: pointer; }
+
+  /* ---- 8 · финал ---- */
+  .final { position: relative; overflow: hidden; }
+  .final::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(60rem 30rem at calc(var(--v-mx, .5) * 100%) 110%, rgb(238 159 58 / .2), transparent 60%); }
+  .close { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: var(--v-5); }
+  .close__mark { width: clamp(5rem, 4rem + 4vw, 7.5rem); height: auto; aspect-ratio: 4 / 3; color: var(--v-ink); margin-bottom: var(--v-2); }
+  .close h2 { max-width: 16ch; }
+  .close p { max-width: 42ch; font-size: var(--v-t-lg); }
+  .close .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-5); margin-top: var(--v-3); }
+  .foot__brand { display: inline-flex; align-items: center; gap: .7rem; }
+  .foot__mark { width: 2.3rem; height: 1.75rem; flex: none; color: var(--v-ink); }
+  .foot { position: relative; margin-top: var(--v-9); padding-top: var(--v-5); border-top: 1px solid var(--v-hair); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--v-3) var(--v-6); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+
+  /* ---- дополнения для кафе ---- */
+.bar__brand small { display: block; }
+  .menu-list { list-style: none; padding: 0; margin: var(--v-5) 0 0; display: grid; gap: var(--v-3); }
+  .menu-list li { display: flex; justify-content: space-between; gap: var(--v-3); border-bottom: 1px solid var(--v-hair); padding-bottom: var(--v-2); }
+  .menu-list b { white-space: nowrap; }
+  .gallery { display: grid; gap: var(--v-4); grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); margin-top: var(--v-6); }
+  .gallery button { all: unset; cursor: zoom-in; display: block; border-radius: 1.2rem; overflow: hidden; }
+  .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+  .gallery button:first-child { grid-column: span 2; }
+  .gallery button:first-child img { aspect-ratio: 16 / 10; }
+  @media (max-width: 640px) { .gallery button:first-child { grid-column: auto; } }
+  .slot { background: #fff3c4; padding: 0 .3rem; border-radius: .3rem; }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <div data-v-progress></div>
+  <div class="v-grain" aria-hidden="true"></div>
+
+  <header class="bar">
+    <a class="bar__brand" href="#top" aria-label="Кристалл - наверх"><svg class="bar__mark" viewBox="0 0 64 48" aria-hidden="true"><circle cx="32" cy="15" r="8.5" fill="#f0a944"/><path d="M5 27.5H59" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 38C25 32 37 32 43 38C37 44 25 44 19 38Z" fill="currentColor"/><path d="M42 38L51 32.5V43.5Z" fill="currentColor"/><circle cx="24.5" cy="37" r="1.4" fill="#0f1922"/></svg><span>Кристалл</span><small>кафе у реки, Великий Устюг</small></a>
+    <nav aria-label="Разделы">
+      <a href="#menu">Меню</a>
+      <a href="#otzyvy">Отзывы</a>
+      <a href="#galereya">Фото</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="v-btn" href="tel:+79218251888">Забронировать</a>
+  </header>
+
+  <main>
+
+    <!-- 1 · УЗНАВАНИЕ: зал у окна -->
+    <section id="top" data-v-act="pin" data-v-span="1.6" data-v-drift="#edf1f2" aria-label="Кафе «Кристалл» в Великом Устюге">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.5">
+          <img src="assets/hero.jpg" alt="Зал кафе «Кристалл» с большими окнами на реку" width="1400" height="1007" fetchpriority="high">
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.85 0 0.12">
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Кафе у реки в Великом Устюге</h1>
+          <p class="v-lede">Русская кухня, уютный зал с большими окнами, банкеты и бизнес-ланч. Гости отмечают быстрый сервис и свежие блюда.</p>
+          <div class="hero__cta">
+            <a class="v-btn" href="tel:+79218251888">Забронировать стол</a>
+            <span class="hero__when"><b>+7 921 825-18-88</b><br>Набережная ул., 72</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ЗАЛ: что здесь есть -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f0f2f0" aria-label="Что есть в «Кристалле»">
+      <div class="v-wrap today">
+        <figure class="today__ph" data-v-reveal="up" data-v-reveal-at="0.08 0.4">
+          <img src="assets/zal.jpg" alt="Зал кафе с синими диванами и круглым зеркалом" width="1200" height="1600" loading="lazy" decoding="async">
+          <figcaption>Зал и вид на реку. Фото с Яндекс Карт</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="80">
+          <p class="today__lead">Для компании и для себя</p>
+          <p class="today__note">Зал на большую компанию, банкетный формат и спокойный ужин вдвоём. Есть Wi-Fi, парковка и оплата картой.</p>
+          <ul class="facts">
+            <li><span>Кухня</span><b>русская</b></li>
+            <li><span>Удобства</span><b>Wi-Fi, парковка, туалет, вход для колясок</b></li>
+            <li><span>Оплата</span><b>картой и наличными</b></li>
+            <li><span>Кофе с собой</span><b>есть</b></li>
+          </ul>
+          <div class="tip">
+            <p>«Современный интерьер как кафе, так и гостиницы, чисто, все на высоком уровне.»</p>
+            <p class="who">Николай М., 30 июля 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · МЕНЮ -->
+    <section id="menu" class="v-section" data-v-act="flow" data-v-drift="#eef1f0" aria-label="Меню">
+      <div class="v-wrap">
+        <div data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Что едят гости</h2>
+          <p class="soft">Гости отдельно хвалят борщ, окрошку, говяжьи щёчки с овощами, пельмени и десерты. Меню меняется, актуальные позиции и цены уточняйте по телефону.</p>
+        </div>
+        <div class="gallery" data-v-in data-v-stagger="60">
+          <button type="button" data-full="assets/blyudo-1.jpg"><img src="assets/blyudo-1.jpg" alt="Блюдо из меню кафе «Кристалл»" width="900" height="1200" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/blyudo-2.jpg"><img src="assets/blyudo-2.jpg" alt="Блюдо из меню кафе «Кристалл»" width="900" height="1200" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/blyudo-3.jpg"><img src="assets/blyudo-3.jpg" alt="Десерт в кафе «Кристалл»" width="1020" height="1020" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/blyudo-4.jpg"><img src="assets/blyudo-4.jpg" alt="Салат и суп в кафе «Кристалл»" width="1200" height="1600" loading="lazy" decoding="async"></button>
+        </div>
+        <ul class="menu-list" data-v-in data-v-stagger="60">
+          <li><span>Кофе эспрессо</span><b>130 ₽</b></li>
+          <li><span>Борщ, окрошка, пельмени</span><b>уточняйте по телефону</b></li>
+          <li><span>Говяжьи щёчки с овощами</span><b>уточняйте по телефону</b></li>
+          <li><span>Бизнес-ланч</span><b>уточняйте по телефону</b></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4 · ОТЗЫВЫ -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#f2f2ee" id="otzyvy" aria-label="Отзывы гостей">
+      <div class="v-wrap">
+        <div class="rev__head" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Что пишут гости</h2>
+          <div class="rating">
+            <b>4,6</b>
+            <div><div class="stars" aria-hidden="true">★★★★★</div><span class="soft">на Яндекс Картах: 98 оценок, 63 отзыва</span></div>
+          </div>
+        </div>
+        <ul class="rev__list" data-v-in data-v-stagger="80">
+          <li><p>«Приятное и вкусное место в Великом Устюге. Искали где поужинать и не прогадали. Зал небольшой, но очень уютный. Город небольшой, поэтому количество посадочных мест достаточно. Кухня очень вкусная, подача блюд достаточно быстрая. Нам очень понравилось, поэтому смело рекомендую всем гостям города»</p><p class="who">Елена К., 25 августа 2026</p></li>
+          <li><p>«Отличное место, приехал пообедать перед вылетом. Очень атмосферное и уютное место. Приветливый персонал. Вкусная кухня. Прекрасный вид на реку. Рекомендую к посещению!»</p><p class="who">А. Божин, 29 сентября 2026</p></li>
+          <li><p>«Ресторан на берегу реки. Большие окна, светло, стильный дизайн. Кухня на 5. Быстро, вкусно, подача хорошая. Лучший из всех где были в Великом Устюге.! Ребята молодцы!»</p><p class="who">Владимир Р., 11 июня 2025</p></li>
+          <li><p>«Заезжали на комплексный обед (650 руб)- были одни на весь ресторан при гостинице. Красота, свеженький ремонт, все так стильно. Очень вкусный обед: суп-солянка наваристая, густая; борщ отличный; настолько сытно, что на 2 взр и 2 детей взяли всего 2 обеда, и все наелись. Просто отличное место!»</p><p class="who">Эллина К., 15 января 2025</p></li>
+          <li><p>«Все очень вкусно, брали борщ, окрошку, говяжьи щечки с овощами. Современный интерьер как кафе, так и гостиницы, чисто, все на высоком уровне.»</p><p class="who">Николай М., 30 июля 2025</p></li>
+          <li><p>«хорошее место для семейного ужина, цены приличные , довольно вкусные блюда , официанты вежливые ,интерьер современный, всё чисто от стола до туалетов.»</p><p class="who">Елена Г., 3 декабря 2025</p></li>
+        </ul>
+        <p class="rev__more"><a class="link" href="https://yandex.ru/maps/org/kristall/68342786628/reviews/" target="_blank" rel="noopener">Читать все отзывы на Яндекс Картах</a></p>
+      </div>
+    </section>
+
+    <!-- 5 · ФОТО -->
+    <section id="galereya" class="v-section" data-v-act="flow" data-v-drift="#f4f1eb" aria-label="Фото кафе">
+      <div class="v-wrap">
+        <div class="sunsets__head" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--md">Фото кафе</h2>
+          <p class="soft">Фото с Яндекс Карт. Нажмите на снимок, чтобы открыть его крупно.</p>
+        </div>
+        <div class="gallery" data-v-in data-v-stagger="60">
+          <button type="button" data-full="assets/hero.jpg"><img src="assets/hero.jpg" alt="Зал у окна с видом на реку" width="1600" height="1066" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/fasad.jpg"><img src="assets/fasad.jpg" alt="Вход в кафе «Кристалл»" width="1600" height="1067" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/fasad-vecher.jpg"><img src="assets/fasad-vecher.jpg" alt="Вход в кафе «Кристалл» вечером" width="1200" height="1600" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/zal-okna.jpg"><img src="assets/zal-okna.jpg" alt="Зал с большими окнами" width="1600" height="1066" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/zal-divan.jpg"><img src="assets/zal-divan.jpg" alt="Столы и синие диваны в зале" width="1200" height="1600" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/banket.jpg"><img src="assets/banket.jpg" alt="Банкетный зал" width="1600" height="1067" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/banket-2.jpg"><img src="assets/banket-2.jpg" alt="Малый банкетный зал" width="1600" height="1066" loading="lazy" decoding="async"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · КОНТАКТЫ -->
+    <section id="kontakty" class="v-section" data-v-act="flow" data-v-drift="#eef1f1" aria-label="Как найти">
+      <div class="v-wrap road">
+        <div data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--md">Как нас найти</h2>
+          <p class="v-body" style="margin-top: var(--v-5)">Кафе находится на набережной Великого Устюга, Набережная улица, 72, первый этаж.</p>
+          <ul class="facts">
+            <li><span>Адрес</span><b>Великий Устюг, Набережная ул., 72</b></li>
+            <li><span>Часы</span><b>открыто до 22:00 (по карточке), точный график уточняйте по телефону</b></li>
+            <li><span>Телефон</span><b><a class="link" href="tel:+79218251888">+7 921 825-18-88</a></b></li>
+            <li><span>Средний чек</span><b>уточняйте по телефону</b></li>
+          </ul>
+          <div class="actions">
+            <a class="v-btn v-btn--ghost" href="https://yandex.ru/maps/org/kristall/68342786628/" target="_blank" rel="noopener">Открыть на Яндекс Картах</a>
+            <a class="v-btn v-btn--ghost" href="https://vk.ru/cafekristall" target="_blank" rel="noopener">Мы во ВКонтакте</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · ДЕЙСТВИЕ -->
+    <section class="v-section final" data-v-act="flow" data-v-drift="#f6efe5" data-v-spotlight aria-label="Забронировать стол">
+      <div class="v-wrap">
+        <div class="close" data-v-in data-v-stagger="90">
+          <h2 class="v-display v-display--lg">Заходите на обед, ужин или банкет</h2>
+          <p class="soft">Позвоните, и мы подскажем свободные столы и условия для большой компании.</p>
+          <div class="actions">
+            <a class="v-btn" href="tel:+79218251888" data-v-magnet="0.2" data-v-rise="0">Позвонить и забронировать</a>
+            <span class="hero__when"><b>+7 921 825-18-88</b><br>Набережная ул., 72</span>
+          </div>
+        </div>
+        <footer class="foot">
+          <span class="foot__brand">Кафе «Кристалл», Великий Устюг, Набережная ул., 72. </span>
+          <span>Демо-сайт по данным карточки, отзывам и фото с Яндекс Карт. Цены, часы и меню уточняются у владельца.</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+  <dialog class="lb" data-lb aria-label="Фото">
+    <img src="" alt="" data-lb-img>
+    <button type="button" class="lb__close" data-lb-close aria-label="Закрыть">Закрыть</button>
+  </dialog>
+</div>
+
+<script src="vibe.js"></script>
+</body>
+</html>
