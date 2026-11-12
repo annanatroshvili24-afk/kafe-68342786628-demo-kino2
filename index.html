@@ -572,5 +572,27 @@
   });
 })();
 </script>
+<script>
+(function () {
+  "use strict";
+  var $ = function (s) { return document.querySelector(s); };
+  var lb = $("[data-lb]"), lbImg = $("[data-lb-img]");
+  if (lb && lb.showModal) {
+    document.querySelectorAll("[data-full]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var img = b.querySelector("img");
+        lbImg.src = b.getAttribute("data-full"); lbImg.alt = img ? img.alt : "";
+        lb.showModal();
+      });
+    });
+    $("[data-lb-close]").addEventListener("click", function () { lb.close(); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+  }
+  var hdr = $(".bar");
+  var onScroll = function () { hdr.classList.toggle("is-scrolled", scrollY > 40); };
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  Vibe.mount($(".v-page"));
+})();
+</script>
 </body>
 </html>
