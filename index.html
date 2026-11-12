@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow" data-publish>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Кристалл - кафе и ресторан в Великом Устюге</title>
-<meta name="description" content="Кафе «Кристалл» на набережной Великого Устюга: русская кухня, вид на реку, банкеты. Набережная ул., 72. +7 921 825-18-88.">
+<title>Кристалл - ресторан с видом на реку в Великом Устюге</title>
+<meta name="description" content="Ресторан «Кристалл» на набережной Великого Устюга: большие окна с видом на реку, русская кухня, банкетные залы. Забронировать столик: +7 921 825-18-88.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Кафе «Кристалл»">
-<meta property="og:title" content="Кафе и ресторан на набережной в Великом Устюге">
+<meta property="og:title" content="Ресторан с видом на реку в Великом Устюге">
 <meta property="og:image" content="./assets/hero.jpg">
 <meta name="theme-color" content="#edf1f2">
 <link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high">
@@ -241,6 +241,19 @@
   .gallery button:first-child img { aspect-ratio: 16 / 10; }
   @media (max-width: 640px) { .gallery button:first-child { grid-column: auto; } }
   .slot { background: #fff3c4; padding: 0 .3rem; border-radius: .3rem; }
+
+  /* ---- дополнения: блюда, бронь ---- */
+  .dish3 { display: grid; gap: var(--v-6); margin-top: var(--v-6); }
+  .dish3 article { padding-top: var(--v-5); border-top: 1px solid var(--v-hair); }
+  .dish3 h3 { margin-bottom: var(--v-3); }
+  .dish3 .tip { margin-top: var(--v-4); padding-top: 0; border-top: 0; }
+  .dish3 .tip p { font-size: var(--v-t-md, 1.05rem); }
+  .tip + .tip { margin-top: var(--v-4); padding-top: var(--v-4); }
+  .bron { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: var(--v-4); margin-top: var(--v-5); width: 100%; max-width: 52rem; }
+  .bron label { display: grid; gap: .4rem; font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .bron input, .bron select { font: inherit; font-size: 1rem; color: var(--v-ink); background: var(--v-surface); border: 1px solid var(--v-hair-strong); border-radius: var(--v-radius); padding: .75em .9em; min-height: 3rem; }
+  .bron__msg { margin-top: var(--v-4); max-width: 52rem; padding: var(--v-4) var(--v-5); background: var(--v-surface); border-left: 3px solid var(--v-accent); border-radius: var(--v-radius); font-size: var(--v-t-lg); line-height: 1.4; }
+  @media (max-width: 860px) { .today .dish3 { gap: var(--v-5); } }
 </style>
 </head>
 <body>
@@ -253,79 +266,151 @@
     <nav aria-label="Разделы">
       <a href="#menu">Меню</a>
       <a href="#otzyvy">Отзывы</a>
+      <a href="#banket">Банкеты</a>
       <a href="#galereya">Фото</a>
       <a href="#kontakty">Контакты</a>
     </nav>
-    <a class="v-btn" href="tel:+79218251888">Забронировать</a>
+    <a class="v-btn" href="#bron">Забронировать</a>
   </header>
 
   <main>
 
-    <!-- 1 · УЗНАВАНИЕ: зал у окна -->
-    <section id="top" data-v-act="pin" data-v-span="1.6" data-v-drift="#edf1f2" aria-label="Кафе «Кристалл» в Великом Устюге">
+    <!-- 1 · УЗНАВАНИЕ: окна на реку -->
+    <section id="top" data-v-act="pin" data-v-span="1.6" data-v-drift="#edf1f2" aria-label="Ресторан «Кристалл» в Великом Устюге">
       <div data-v-stage>
         <div class="v-layer hero__back" data-v-parallax="-0.5">
-          <img src="assets/hero.jpg" alt="Зал кафе «Кристалл» с большими окнами на реку" width="1400" height="1007" fetchpriority="high">
+          <img src="assets/hero.jpg" alt="Зал ресторана «Кристалл» с большими окнами" width="1600" height="1066" fetchpriority="high">
         </div>
         <div class="hero__shade" aria-hidden="true"></div>
         <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.85 0 0.12">
-          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Кафе у реки в Великом Устюге</h1>
-          <p class="v-lede">Русская кухня, уютный зал с большими окнами, банкеты и бизнес-ланч. Гости отмечают быстрый сервис и свежие блюда.</p>
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Ресторан с видом на реку</h1>
+          <p class="v-lede">Большие окна, светлый зал, русская кухня и банкетные залы на набережной Великого Устюга. Столик у окна лучше занять заранее.</p>
           <div class="hero__cta">
-            <a class="v-btn" href="tel:+79218251888">Забронировать стол</a>
+            <a class="v-btn" href="#bron">Забронировать столик</a>
             <span class="hero__when"><b>+7 921 825-18-88</b><br>Набережная ул., 72</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 2 · ЗАЛ: что здесь есть -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f0f2f0" aria-label="Что есть в «Кристалле»">
+    <!-- 2 · ФИРМЕННЫЙ ХОД: столик у окна -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f0f2f0" aria-label="Столик у окна">
       <div class="v-wrap today">
         <figure class="today__ph" data-v-reveal="up" data-v-reveal-at="0.08 0.4">
-          <img src="assets/zal.jpg" alt="Зал кафе с синими диванами и круглым зеркалом" width="1200" height="1600" loading="lazy" decoding="async">
-          <figcaption>Зал и вид на реку. Фото с Яндекс Карт</figcaption>
+          <img src="assets/vid-iz-okna.jpg" alt="Вид из окна ресторана на реку" width="1200" height="1600" loading="lazy" decoding="async">
+          <figcaption>Вид из окна на реку. Фото с Яндекс Карт</figcaption>
         </figure>
         <div data-v-in data-v-stagger="80">
-          <p class="today__lead">Для компании и для себя</p>
-          <p class="today__note">Зал на большую компанию, банкетный формат и спокойный ужин вдвоём. Есть Wi-Fi, парковка и оплата картой.</p>
+          <p class="today__lead">Главное, за чем сюда приходят</p>
+          <h2 class="v-display v-display--md">Столик у окна с видом на реку</h2>
+          <p class="today__note">Зал стоит на набережной: большие окна, светлые шторы, тёплый свет вечером. Гости пишут про вид на реку и светлый зал. В обед и по выходным лучше позвонить заранее и попросить стол у окна.</p>
           <ul class="facts">
-            <li><span>Кухня</span><b>русская</b></li>
-            <li><span>Удобства</span><b>Wi-Fi, парковка, туалет, вход для колясок</b></li>
+            <li><span>Зал</span><b>большие окна, мягкие кресла и диваны, вечером тёплый свет</b></li>
+            <li><span>Для кого</span><b>ужин вдвоём, семья, деловой обед, компания друзей</b></li>
+            <li><span>Удобства</span><b>Wi-Fi, парковка, вход для колясок, кофе с собой</b></li>
             <li><span>Оплата</span><b>картой и наличными</b></li>
-            <li><span>Кофе с собой</span><b>есть</b></li>
           </ul>
           <div class="tip">
-            <p>«Современный интерьер как кафе, так и гостиницы, чисто, все на высоком уровне.»</p>
-            <p class="who">Николай М., 30 июля 2025</p>
+            <p>«Современный дизайн и вид на реку радуют глаз.»</p>
+            <p class="who">Анна, 20 июня 2026</p>
+          </div>
+          <div class="tip">
+            <p>«Прекрасный вид на реку.»</p>
+            <p class="who">А. Божин, 29 сентября 2026</p>
+          </div>
+          <div class="actions" style="display:flex;flex-wrap:wrap;gap:var(--v-3);margin-top:var(--v-6)">
+            <a class="v-btn" href="#bron">Забронировать столик у окна</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3 · МЕНЮ -->
-    <section id="menu" class="v-section" data-v-act="flow" data-v-drift="#eef1f0" aria-label="Меню">
-      <div class="v-wrap">
-        <div data-v-in data-v-stagger="70">
-          <h2 class="v-display v-display--lg">Что едят гости</h2>
-          <p class="soft">Гости отдельно хвалят борщ, окрошку, говяжьи щёчки с овощами, пельмени и десерты. Меню меняется, актуальные позиции и цены уточняйте по телефону.</p>
+    <!-- 3 · ПОВОРОТ: за чем сюда едут -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#eef1f0" aria-label="Что здесь едят">
+      <div class="v-wrap today">
+        <div data-v-in data-v-stagger="80">
+          <p class="today__lead">Русская кухня</p>
+          <h2 class="v-display v-display--md">Что здесь заказывают чаще всего</h2>
+          <div class="dish3">
+            <article>
+              <h3>Борщ и солянка</h3>
+              <p>Борщ с чесночной гренкой и салом и сборная мясная солянка. Подают горячими, порции сытные.</p>
+              <div class="tip"><p>«Очень вкусный обед: суп-солянка наваристая, густая; борщ отличный; настолько сытно, что на 2 взр и 2 детей взяли всего 2 обеда, и все наелись.»</p><p class="who">Эллина К., 15 января 2025</p></div>
+            </article>
+            <article>
+              <h3>Домашние пельмени</h3>
+              <p>Отварные пельмени с маслом или со сметаной. Гости отдельно хвалят тесто и начинку.</p>
+              <div class="tip"><p>«Ваши домашние пельмени просто оближешь все пальчики и тарелки.»</p><p class="who">Юлия, 22 февраля 2025</p></div>
+            </article>
+            <article>
+              <h3>Грузди со сметаной</h3>
+              <p>Солёные грузди со сметаной в закусках. Ради них гости возвращаются в следующий приезд.</p>
+              <div class="tip"><p>«Порадовали грузди со сметаной.»</p><p class="who">Александр К., 24 февраля 2025</p></div>
+            </article>
+          </div>
         </div>
-        <div class="gallery" data-v-in data-v-stagger="60">
-          <button type="button" data-full="assets/blyudo-1.jpg"><img src="assets/blyudo-1.jpg" alt="Блюдо из меню кафе «Кристалл»" width="900" height="1200" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="assets/blyudo-2.jpg"><img src="assets/blyudo-2.jpg" alt="Блюдо из меню кафе «Кристалл»" width="900" height="1200" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="assets/blyudo-3.jpg"><img src="assets/blyudo-3.jpg" alt="Десерт в кафе «Кристалл»" width="1020" height="1020" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="assets/blyudo-4.jpg"><img src="assets/blyudo-4.jpg" alt="Салат и суп в кафе «Кристалл»" width="1200" height="1600" loading="lazy" decoding="async"></button>
-        </div>
-        <ul class="menu-list" data-v-in data-v-stagger="60">
-          <li><span>Кофе эспрессо</span><b>130 ₽</b></li>
-          <li><span>Борщ, окрошка, пельмени</span><b>уточняйте по телефону</b></li>
-          <li><span>Говяжьи щёчки с овощами</span><b>уточняйте по телефону</b></li>
-          <li><span>Бизнес-ланч</span><b>уточняйте по телефону</b></li>
-        </ul>
+        <figure class="today__ph" data-v-reveal="up" data-v-reveal-at="0.08 0.4">
+          <img src="assets/borshch.jpg" alt="Борщ и сметана на столе в «Кристалле»" width="1200" height="1600" loading="lazy" decoding="async">
+          <figcaption>Борщ в «Кристалле». Фото с Яндекс Карт</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- 4 · ОТЗЫВЫ -->
+    <!-- 4 · ВЫБОР: меню -->
+    <section id="menu" class="v-section" data-v-act="flow" data-v-drift="#eef1f0" aria-label="Меню">
+      <div class="v-wrap">
+        <div data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Что ещё в меню</h2>
+          <p class="soft">Позиции взяты из фото меню на карточке Яндекс Карт. Меню и цены меняются, поэтому актуальные цены уточняйте по телефону. Есть завтраки, комплексные обеды и ужины.</p>
+        </div>
+        <div class="gallery" data-v-in data-v-stagger="60">
+          <button type="button" data-full="assets/blyudo-1.jpg"><img src="assets/blyudo-1.jpg" alt="Дегустационный набор напитков" width="1200" height="1600" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/blyudo-2.jpg"><img src="assets/blyudo-2.jpg" alt="Медовый торт" width="1600" height="900" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/blyudo-3.jpg"><img src="assets/blyudo-3.jpg" alt="Чизкейк" width="1020" height="1020" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/blyudo-4.jpg"><img src="assets/blyudo-4.jpg" alt="Салат и суп" width="1200" height="1600" loading="lazy" decoding="async"></button>
+        </div>
+        <div class="menu-list__grid" data-v-in data-v-stagger="60">
+          <div class="page">
+            <h3>Закуски и салаты</h3>
+            <ul>
+              <li><div class="line"><span>Грузди солёные со сметаной</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Мясная нарезка</span><em>уточнить</em></div><p>Язык отварной, балык копчёный, говядина копчёная, колбаса сырокопчёная.</p></li>
+              <li><div class="line"><span>Сырная тарелка</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Винегрет с груздями</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Салат с хрустящими баклажанами</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Цезарь с курой</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Морской прибой</span><em>уточнить</em></div><p>Креветки, кальмар, огурец, кукуруза, яйцо.</p></li>
+            </ul>
+          </div>
+          <div class="page">
+            <h3>Супы и горячее</h3>
+            <ul>
+              <li><div class="line"><span>Борщ с чесночной гренкой и салом</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Солянка сборная мясная</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Щёчки телячьи, тушёные с овощами</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Мясо по-французски</span><em>уточнить</em></div><p>Свинина, лук, помидор, сыр.</p></li>
+              <li><div class="line"><span>Сёмга запечённая с картофелем</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Хрустящая треска с соусом тартар</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Пельмени отварные</span><em>уточнить</em></div><p>С маслом или со сметаной.</p></li>
+            </ul>
+          </div>
+          <div class="page">
+            <h3>Десерты, напитки, завтраки</h3>
+            <ul>
+              <li><div class="line"><span>Торт медовик и морковный</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Чизкейк, штрудель</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Блинчики и сырники</span><em>уточнить</em></div><p>Со сгущённым молоком, сметаной и вареньем.</p></li>
+              <li><div class="line"><span>Лимонад манго-маракуйя</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Кофе и чай</span><em>уточнить</em></div><p>Кофе из кофемашины, чай «Медовое яблоко с имбирём», «Таёжный микс».</p></li>
+              <li><div class="line"><span>Завтраки</span><em>уточнить</em></div><p>Блинчики, сырники, каша, омлет, бутерброды.</p></li>
+              <li><div class="line"><span>Бизнес-ланч и комплексные обеды</span><em>уточнить</em></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · ДОКАЗАТЕЛЬСТВО: отзывы -->
     <section class="v-section" data-v-act="flow" data-v-drift="#f2f2ee" id="otzyvy" aria-label="Отзывы гостей">
       <div class="v-wrap">
         <div class="rev__head" data-v-in data-v-stagger="70">
@@ -335,6 +420,7 @@
             <div><div class="stars" aria-hidden="true">★★★★★</div><span class="soft">на Яндекс Картах: 98 оценок, 63 отзыва</span></div>
           </div>
         </div>
+        <p class="soft" style="margin-top:var(--v-4)">Доля положительных отзывов на Яндекс Картах: интерьер 95%, чистота 100%, атмосфера 90%, еда 88%.</p>
         <ul class="rev__list" data-v-in data-v-stagger="80">
           <li><p>«Приятное и вкусное место в Великом Устюге. Искали где поужинать и не прогадали. Зал небольшой, но очень уютный. Город небольшой, поэтому количество посадочных мест достаточно. Кухня очень вкусная, подача блюд достаточно быстрая. Нам очень понравилось, поэтому смело рекомендую всем гостям города»</p><p class="who">Елена К., 25 августа 2026</p></li>
           <li><p>«Отличное место, приехал пообедать перед вылетом. Очень атмосферное и уютное место. Приветливый персонал. Вкусная кухня. Прекрасный вид на реку. Рекомендую к посещению!»</p><p class="who">А. Божин, 29 сентября 2026</p></li>
@@ -347,58 +433,113 @@
       </div>
     </section>
 
-    <!-- 5 · ФОТО -->
-    <section id="galereya" class="v-section" data-v-act="flow" data-v-drift="#f4f1eb" aria-label="Фото кафе">
-      <div class="v-wrap">
-        <div class="sunsets__head" data-v-in data-v-stagger="70">
-          <h2 class="v-display v-display--md">Фото кафе</h2>
-          <p class="soft">Фото с Яндекс Карт. Нажмите на снимок, чтобы открыть его крупно.</p>
+    <!-- 6 · ПРАЗДНИКИ: банкетные залы -->
+    <section id="banket" class="v-section" data-v-act="flow" data-v-drift="#f4f1eb" aria-label="Банкеты и праздники">
+      <div class="v-wrap fest">
+        <div class="fest__ph" data-v-in data-v-stagger="80">
+          <div class="a"><img src="assets/banket.jpg" alt="Банкетный зал с длинным столом" width="1600" height="1067" loading="lazy" decoding="async"></div>
+          <div class="b"><img src="assets/banket-2.jpg" alt="Малый банкетный зал" width="1600" height="1066" loading="lazy" decoding="async"></div>
         </div>
-        <div class="gallery" data-v-in data-v-stagger="60">
-          <button type="button" data-full="assets/hero.jpg"><img src="assets/hero.jpg" alt="Зал у окна с видом на реку" width="1600" height="1066" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="assets/fasad.jpg"><img src="assets/fasad.jpg" alt="Вход в кафе «Кристалл»" width="1600" height="1067" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="assets/fasad-vecher.jpg"><img src="assets/fasad-vecher.jpg" alt="Вход в кафе «Кристалл» вечером" width="1200" height="1600" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="assets/zal-okna.jpg"><img src="assets/zal-okna.jpg" alt="Зал с большими окнами" width="1600" height="1066" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="assets/zal-divan.jpg"><img src="assets/zal-divan.jpg" alt="Столы и синие диваны в зале" width="1200" height="1600" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="assets/banket.jpg"><img src="assets/banket.jpg" alt="Банкетный зал" width="1600" height="1067" loading="lazy" decoding="async"></button>
-          <button type="button" data-full="assets/banket-2.jpg"><img src="assets/banket-2.jpg" alt="Малый банкетный зал" width="1600" height="1066" loading="lazy" decoding="async"></button>
+        <div data-v-in data-v-stagger="80">
+          <h2 class="v-display v-display--md">День рождения, банкет или деловой обед</h2>
+          <p class="v-body" style="margin-top: var(--v-5)">В «Кристалле» есть банкетные залы, где накрывают общий стол для большой компании. Гости отмечали здесь дни рождения и семейные встречи. Рядом, в том же здании, отель: удобно, если гости приехали из другого города.</p>
+          <ul class="facts">
+            <li><span>Залы</span><b>основной зал и банкетные залы разного размера</b></li>
+            <li><span>Бронь</span><b>банкетный зал бронируют заранее, гости оставляли аванс (из отзыва)</b></li>
+            <li><span>Меню банкета</span><b>уточнить по телефону</b></li>
+            <li><span>Рядом</span><b>отель в том же здании</b></li>
+          </ul>
+          <div class="tip">
+            <p>«Спасибо за душевный вкусный день рождения моей мамы. Низкий поклон официантам за душевный прием, а поварам за наивкуснейшие блюда приготовленные с душой.»</p>
+            <p class="who">Елена П., 28 июня 2026</p>
+          </div>
+          <div class="actions" style="display:flex;flex-wrap:wrap;gap:var(--v-3);margin-top:var(--v-6)">
+            <a class="v-btn" href="tel:+79218251888">Обсудить праздник: +7 921 825-18-88</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 6 · КОНТАКТЫ -->
+    <!-- 7 · ФОТО -->
+    <section id="galereya" class="v-section" data-v-act="flow" data-v-drift="#f4f1eb" aria-label="Фото ресторана">
+      <div class="v-wrap">
+        <div class="sunsets__head" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--md">Зал, окна и вид на реку</h2>
+          <p class="soft">Так выглядит «Кристалл» изнутри и снаружи. Фото с Яндекс Карт. Нажмите на снимок, чтобы открыть его крупно.</p>
+        </div>
+        <div class="gallery" data-v-in data-v-stagger="60">
+          <button type="button" data-full="assets/zal-okna.jpg"><img src="assets/zal-okna.jpg" alt="Зал с большими окнами" width="1600" height="1066" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/okno.jpg"><img src="assets/okno.jpg" alt="Окна с белыми шторами и вид на реку" width="1200" height="1600" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/zal-divan.jpg"><img src="assets/zal-divan.jpg" alt="Столы и синие диваны в зале" width="1200" height="1600" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/zal.jpg"><img src="assets/zal.jpg" alt="Зал с круглым зеркалом" width="1200" height="1600" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/okno-dekor.jpg"><img src="assets/okno-dekor.jpg" alt="Окно с новогодним декором" width="1600" height="1200" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/fasad.jpg"><img src="assets/fasad.jpg" alt="Вход в «Кристалл»" width="1600" height="1067" loading="lazy" decoding="async"></button>
+          <button type="button" data-full="assets/fasad-vecher.jpg"><img src="assets/fasad-vecher.jpg" alt="Вход в «Кристалл» вечером" width="1200" height="1600" loading="lazy" decoding="async"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · ДЕЙСТВИЕ: забронировать столик -->
+    <section id="bron" class="v-section final" data-v-act="flow" data-v-drift="#f6efe5" data-v-spotlight aria-label="Забронировать столик">
+      <div class="v-wrap">
+        <div class="close" data-v-in data-v-stagger="90">
+          <h2 class="v-display v-display--lg">Забронировать столик</h2>
+          <p class="soft">Выберите дату, время и место. Мы составим сообщение, а вы позвоните по номеру ниже: стол у окна лучше назвать сразу.</p>
+          <form class="bron" id="bronForm" onsubmit="return false">
+            <label>Дата<input type="date" id="bDate"></label>
+            <label>Время
+              <select id="bTime">
+                <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option><option selected>19:00</option><option>20:00</option><option>21:00</option>
+              </select>
+            </label>
+            <label>Гостей
+              <select id="bGuests">
+                <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option><option>10</option><option>12 и больше</option>
+              </select>
+            </label>
+            <label>Где
+              <select id="bPlace">
+                <option selected>у окна с видом на реку</option>
+                <option>в основном зале</option>
+                <option>в банкетном зале</option>
+              </select>
+            </label>
+          </form>
+          <p class="bron__msg" id="bMsg" aria-live="polite">Здравствуйте! Хочу забронировать столик на 2 человек в 19:00, у окна с видом на реку.</p>
+          <div class="actions">
+            <a class="v-btn" href="tel:+79218251888" data-v-magnet="0.2" data-v-rise="0">Позвонить и забронировать</a>
+            <button type="button" class="v-btn v-btn--ghost" id="bCopy">Скопировать сообщение</button>
+            <span class="hero__when"><b>+7 921 825-18-88</b><br>Набережная ул., 72, первый этаж</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · ДОВЕРИЕ: как добраться -->
     <section id="kontakty" class="v-section" data-v-act="flow" data-v-drift="#eef1f1" aria-label="Как найти">
       <div class="v-wrap road">
         <div data-v-in data-v-stagger="70">
           <h2 class="v-display v-display--md">Как нас найти</h2>
-          <p class="v-body" style="margin-top: var(--v-5)">Кафе находится на набережной Великого Устюга, Набережная улица, 72, первый этаж.</p>
+          <p class="v-body" style="margin-top: var(--v-5)">Ресторан находится на набережной Великого Устюга, на первом этаже здания с отелем. Рядом есть парковка. Ближайшая остановка «Речное училище» в 320 метрах (по Яндекс Картам).</p>
           <ul class="facts">
-            <li><span>Адрес</span><b>Великий Устюг, Набережная ул., 72</b></li>
-            <li><span>Часы</span><b>открыто до 22:00 (по карточке), точный график уточняйте по телефону</b></li>
+            <li><span>Адрес</span><b>Великий Устюг, Набережная ул., 72, первый этаж</b></li>
+            <li><span>Часы</span><b>на карточке: открыто до 22:00, точный график уточняйте по телефону</b></li>
             <li><span>Телефон</span><b><a class="link" href="tel:+79218251888">+7 921 825-18-88</a></b></li>
-            <li><span>Средний чек</span><b>уточняйте по телефону</b></li>
+            <li><span>Оплата</span><b>картой и наличными</b></li>
+            <li><span>Удобства</span><b>Wi-Fi, парковка, вход для колясок, кофе с собой. С животными нельзя</b></li>
           </ul>
           <div class="actions">
-            <a class="v-btn v-btn--ghost" href="https://yandex.ru/maps/org/kristall/68342786628/" target="_blank" rel="noopener">Открыть на Яндекс Картах</a>
+            <a class="v-btn v-btn--ghost" href="https://yandex.ru/maps/org/kristall/68342786628/" target="_blank" rel="noopener">Построить маршрут</a>
             <a class="v-btn v-btn--ghost" href="https://vk.ru/cafekristall" target="_blank" rel="noopener">Мы во ВКонтакте</a>
           </div>
         </div>
+        <figure class="road__ph" data-v-reveal="up" data-v-reveal-at="0.08 0.4">
+          <img src="assets/fasad.jpg" alt="Вход в ресторан «Кристалл»" width="1600" height="1067" loading="lazy" decoding="async">
+        </figure>
       </div>
-    </section>
-
-    <!-- 7 · ДЕЙСТВИЕ -->
-    <section class="v-section final" data-v-act="flow" data-v-drift="#f6efe5" data-v-spotlight aria-label="Забронировать стол">
       <div class="v-wrap">
-        <div class="close" data-v-in data-v-stagger="90">
-          <h2 class="v-display v-display--lg">Заходите на обед, ужин или банкет</h2>
-          <p class="soft">Позвоните, и мы подскажем свободные столы и условия для большой компании.</p>
-          <div class="actions">
-            <a class="v-btn" href="tel:+79218251888" data-v-magnet="0.2" data-v-rise="0">Позвонить и забронировать</a>
-            <span class="hero__when"><b>+7 921 825-18-88</b><br>Набережная ул., 72</span>
-          </div>
-        </div>
         <footer class="foot">
-          <span class="foot__brand">Кафе «Кристалл», Великий Устюг, Набережная ул., 72. </span>
+          <span class="foot__brand">Ресторан «Кристалл», Великий Устюг, Набережная ул., 72.</span>
           <span>Демо-сайт по данным карточки, отзывам и фото с Яндекс Карт. Цены, часы и меню уточняются у владельца.</span>
         </footer>
       </div>
@@ -412,5 +553,24 @@
 </div>
 
 <script src="vibe.js"></script>
+<script>
+(function () {
+  var d = document.getElementById("bDate"), t = document.getElementById("bTime"), g = document.getElementById("bGuests"), p = document.getElementById("bPlace"), msg = document.getElementById("bMsg"), cp = document.getElementById("bCopy");
+  if (!msg) return;
+  function months(i) { return ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"][i]; }
+  function build() {
+    var s = "Здравствуйте! Хочу забронировать столик на " + g.value + (g.value.indexOf("и больше") > -1 ? " человек" : " чел.");
+    if (d.value) { var x = new Date(d.value + "T00:00:00"); s += ", " + x.getDate() + " " + months(x.getMonth()); }
+    s += " в " + t.value + ", " + p.value + ".";
+    msg.textContent = s;
+  }
+  [d, t, g, p].forEach(function (e) { e.addEventListener("change", build); });
+  build();
+  cp.addEventListener("click", function () {
+    var done = function () { cp.textContent = "Скопировано"; setTimeout(function () { cp.textContent = "Скопировать сообщение"; }, 1800); };
+    try { navigator.clipboard.writeText(msg.textContent).then(done, done); } catch (e) { done(); }
+  });
+})();
+</script>
 </body>
 </html>
